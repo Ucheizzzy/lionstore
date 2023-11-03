@@ -1,4 +1,5 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import {
   About,
@@ -14,7 +15,8 @@ import {
   SingleProducts,
 } from './pages'
 import { ErrorElement } from './components'
-
+// loaders
+import { loader as landingLoader } from './pages/Landing'
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -31,6 +33,8 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Landing />,
+        errorElement: <ErrorElement />,
+        loader: landingLoader,
       },
       {
         path: 'products',
@@ -73,6 +77,7 @@ const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <RouterProvider router={router} />
+      <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   )
 }
