@@ -18,6 +18,7 @@ import { ErrorElement } from './components'
 // loaders
 import { loader as landingLoader } from './pages/Landing'
 import { loader as singleProductsLoader } from './pages/SingleProducts'
+import { loader as productsLoader } from './pages/Products'
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -40,6 +41,8 @@ const router = createBrowserRouter([
       {
         path: 'products',
         element: <Products />,
+        loader: productsLoader(queryClient),
+        errorElement: <ErrorElement />,
       },
       {
         path: 'products/:id',

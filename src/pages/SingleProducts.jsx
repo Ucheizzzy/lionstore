@@ -23,7 +23,7 @@ const SingleProducts = () => {
   const dollarsAmount = formatPrice(price)
   const [productColor, setProductColor] = useState(colors[0])
   const [amount, setAmount] = useState(1)
-  console.log(amount)
+
   return (
     <section>
       <div className='text-md breadcrumbs'>
