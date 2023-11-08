@@ -19,6 +19,8 @@ import { ErrorElement } from './components'
 import { loader as landingLoader } from './pages/Landing'
 import { loader as singleProductsLoader } from './pages/SingleProducts'
 import { loader as productsLoader } from './pages/Products'
+// actions
+import { action as registerAction } from './pages/Register'
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -77,6 +79,7 @@ const router = createBrowserRouter([
     path: '/register',
     element: <Register />,
     errorElement: <ErrorElement />,
+    action: registerAction,
   },
 ])
 const App = () => {
