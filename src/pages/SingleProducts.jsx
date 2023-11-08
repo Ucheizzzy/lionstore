@@ -1,6 +1,8 @@
 import { Link, useLoaderData } from 'react-router-dom'
 import { customFetch, formatPrice, generateAmountOptions } from '../utils'
 import { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { addItems } from '../features/cartSlice'
 const singleProductQuery = (id) => {
   return {
     queryKey: ['singleProduct', id],
@@ -17,6 +19,7 @@ export const loader =
   }
 
 const SingleProducts = () => {
+  const dispatch = useDispatch()
   const { product } = useLoaderData()
   const { image, title, price, description, colors, company } =
     product?.attributes
@@ -24,6 +27,17 @@ const SingleProducts = () => {
   const [productColor, setProductColor] = useState(colors[0])
   const [amount, setAmount] = useState(1)
 
+  const cartProducts = {
+    cartID: product.id + productColor,
+    productID: product.id,
+    image,
+    title,
+    price,
+    company,
+    productColor,
+    amount,
+  }
+  const addToCart = () => dispatch(addItems({ product: cartProducts }))
   return (
     <section>
       <div className='text-md breadcrumbs'>
@@ -86,7 +100,11 @@ const SingleProducts = () => {
             </select>
           </div>
           <div className='mt-5'>
-            <button type='button' className='btn btn-secondary btn-md'>
+            <button
+              type='button'
+              className='btn btn-secondary btn-md'
+              onClick={addToCart}
+            >
               Add to bag
             </button>
           </div>
