@@ -14,14 +14,13 @@ const About = () => {
         </div>
       </div>
       <p className='mt-6 text-lg leading-8 max-w-2xl mx-auto'>
-        Hi, My name is Mr.UCHE and I am a Full Stack Software Engineer Welcome
-        to LionStore Application. This is a React Js e-commerce project that
-        displays key features of sorting and filtering products, adding to cart,
-        checking out and placing orders. I built this application using React
-        JS, Tailwind css, Daisy UI, Redux Toolkit and React Query for caching
-        and optimization. The API consumed can be found in here
-        https://documenter.getpostman.com/view/18152321/2s9Xy5KpTi. Hope you
-        enjoy this application
+        At LionStore, we believe that furniture is not just about functionality,
+        but also about expressing your unique style and creating a warm and
+        inviting atmosphere. Whether you're furnishing your home, office, or any
+        other space, we have the perfect pieces to suit your needs. Thank you
+        for choosing [Store Name] as your go-to destination for all your
+        furniture needs. We look forward to helping you create a space that
+        truly reflects your personal style and enhances your daily living
       </p>
     </>
   )
