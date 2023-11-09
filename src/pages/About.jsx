@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const About = () => {
   return (
     <>
@@ -18,9 +20,12 @@ const About = () => {
         but also about expressing your unique style and creating a warm and
         inviting atmosphere. Whether you're furnishing your home, office, or any
         other space, we have the perfect pieces to suit your needs. Thank you
-        for choosing [Store Name] as your go-to destination for all your
-        furniture needs. We look forward to helping you create a space that
-        truly reflects your personal style and enhances your daily living
+        for choosing LionStore as your go-to destination for all your furniture
+        needs. We look forward to helping you create a space that truly reflects
+        your personal style and enhances your daily living.
+        <Link to='/products' className='ms-1 text-primary'>
+          Check out our Products
+        </Link>
       </p>
     </>
   )
