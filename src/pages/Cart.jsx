@@ -6,7 +6,7 @@ const Cart = () => {
   const { user } = useSelector((state) => state.userState)
   const { numItemsInCart } = useSelector((state) => state.cartState)
   if (numItemsInCart === 0) {
-    return <SectionTitle text='Your cart is empty. Not cool. Add something..' />
+    return <SectionTitle text='Your cart is empty. Add something..' />
   }
   return (
     <>
