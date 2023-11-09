@@ -12,10 +12,11 @@ const Hero = () => {
           Changing the way you shop
         </h1>
         <p className='mt-8 max-w-xl text-lg leading-8'>
-          Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem
-          cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat
-          aliqua. Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
-          qui lorem cupidatat commodo.
+          Welcome to LionStore Application. This is a React Js e-commerce
+          project that displays key features of sorting and filtering products,
+          adding to cart, checking out and placing orders. I built this
+          application using React JS, Tailwind css, Daisy UI, Redux Toolkit and
+          React Query for caching and optimization.
         </p>
         <div className='mt-10'>
           <Link className='btn btn-primary' to='products'>

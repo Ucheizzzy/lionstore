@@ -14,10 +14,14 @@ const About = () => {
         </div>
       </div>
       <p className='mt-6 text-lg leading-8 max-w-2xl mx-auto'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic veniam
-        odit, officiis eos mollitia alias, doloremque, aspernatur ratione
-        asperiores voluptas labore minus dolores reprehenderit corporis quos.
-        Assumenda molestias harum dignissimos?
+        Hi, My name is Mr.UCHE and I am a Full Stack Software Engineer Welcome
+        to LionStore Application. This is a React Js e-commerce project that
+        displays key features of sorting and filtering products, adding to cart,
+        checking out and placing orders. I built this application using React
+        JS, Tailwind css, Daisy UI, Redux Toolkit and React Query for caching
+        and optimization. The API consumed can be found in here
+        https://documenter.getpostman.com/view/18152321/2s9Xy5KpTi. Hope you
+        enjoy this application
       </p>
     </>
   )
