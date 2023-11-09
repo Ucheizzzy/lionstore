@@ -10,6 +10,7 @@ const Header = () => {
   const queryClient = useQueryClient()
   const { user } = useSelector((state) => state.userState)
   const handleLogout = () => {
+    navigate('/')
     dispatch(clearCart())
     dispatch(logoutUser())
     queryClient.removeQueries()
